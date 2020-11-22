@@ -1,0 +1,20 @@
+{
+
+ ; the name of our Datomic database
+ :db-name    "ws-demo"
+
+ ; connection configuration
+ :connection {:server-type :ion
+              :region      "eu-west-1"
+              :system      "knox"
+              :endpoint    "http://entry.knox.eu-west-1.datomic.net:8182/"
+              :proxy-port  8182}
+
+ ; a secret string used to sign our JSON Web Tokens
+ :secret     "shesellseashellsbytheseashore"
+
+ ; the hostname and path of our API Gateway
+ :api-gw     {:hostname "n3giprj0y8.execute-api.eu-west-1.amazonaws.com"
+              :stage    "dev"
+              :path     "/dev/@connections/"}
+ }

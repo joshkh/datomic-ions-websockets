@@ -1,0 +1,11 @@
+[#:db{:ident       :user/id,
+      :valueType   :db.type/uuid,
+      :cardinality :db.cardinality/one,
+      :unique      :db.unique/identity,
+      :doc         "The ID of a user, which is a UUID and unique by identity"}
+
+ #:db{:ident       :ws/connection-ids,
+      :valueType   :db.type/string,
+      :cardinality :db.cardinality/many,
+      :noHistory   true
+      :doc         "A collection of AWS API Gateway websocket connection IDs belonging to a user"}]

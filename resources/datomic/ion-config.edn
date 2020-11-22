@@ -1,0 +1,9 @@
+{:app-name "knox"
+ :allow    []
+ :lambdas  {:ws-gateway-authorizer      {:fn          wsdemo.handlers/gateway-authorizer
+                                         :description "Authorize a token"}
+            :ws-handle-connection-proxy {:fn          wsdemo.handlers/handle-connection-proxy
+                                         :description "Register/unregister a user's websocket client connection"}
+
+            :ws-handle-message-proxy    {:fn          wsdemo.io/handle-message-proxy
+                                         :description "Handle a websocket message"}}}
